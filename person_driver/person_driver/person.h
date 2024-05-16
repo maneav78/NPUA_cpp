@@ -8,6 +8,7 @@ using namespace std;
 int CurrentYear();
 class Person {
 public:
+	
 	Person(string="undefined", string="undefined", string="undefined", int=CurrentYear());
 	Person(Person&);
 

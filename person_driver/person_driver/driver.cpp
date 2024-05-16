@@ -20,15 +20,21 @@ void Driver::getDataofLicense() const
 
 void Driver::setDataofLicense(string dln, int gy)
 {
-    if (!isValidDLNumber(dln)) {
-        cout << "Invalid Driver License number." << endl;
-        dlNumber = "Undefined";
+    if (dln != "undefined" && !isValidDLNumber(dln)) {
+        cout << "Invalid Driver License number: " << dln << endl;
+        this->dlNumber = "undefined";
+    }
+    else {
+        this->dlNumber = dln;
+    }
 
-    }else this->dlNumber = dln;
     if (gy < getAge() + 18 || gy > CurrentYear()) {
-        cout << "Invalid year of getting Driver License." << endl;
-        gy = CurrentYear();
-    }else this->gyear = gy;
+        cout << "Invalid year of getting Driver License: " << gy << endl;
+        this->gyear = CurrentYear();
+    }
+    else {
+        this->gyear = gy;
+    }
     
 }
 
