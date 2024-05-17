@@ -4,7 +4,9 @@ using namespace std;
 
 class Shape3d {
 public:
-    virtual ~Shape3d();
+    virtual ~Shape3d(){
+        // std::cout << "Shape destructor worked!" << std::endl;
+    };
     virtual double area() const = 0;
     virtual double perimeter() const = 0;
     virtual double volume() const = 0;
@@ -16,3 +18,5 @@ public:
         return os;
     }
 };
+
+
