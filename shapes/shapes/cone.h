@@ -11,13 +11,8 @@ public:
     virtual ~Cone();
 
     void setValues(double r, double h);
-    double area() const override;
-    double perimeter() const override;
-    double volume() const override;
-    void print(ostream& os) const override;
-
-    bool operator<(const Cone& other) const;
-    bool operator>(const Cone& other) const;
-
+    double area() const;
+    double volume() const;
+    void print() const;
    
 };

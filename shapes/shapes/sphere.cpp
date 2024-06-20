@@ -22,28 +22,12 @@ double Sphere::area() const
     return 4 * 3.14 * r * r;
 }
 
-double Sphere::perimeter() const
-{
-    return 2 * 3.14 * r;
-}
-
 double Sphere::volume() const {
     return (4.0 / 3.0) * 3.14 * r * r * r;
 }
 
-void Sphere::print(ostream& os) const
+void Sphere::print() const
 {
-    os << "Sphere radius: " << r << endl;
+    cout << "Sphere with radius: " << r << endl;
 }
-
-bool Sphere::operator<(const Sphere& other) const
-{
-    return r < other.r;
-}
-
-bool Sphere::operator>(const Sphere& other) const
-{
-    return r > other.r;
-}
-
 

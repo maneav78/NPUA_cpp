@@ -6,18 +6,13 @@ class Sphere : public Shape3d
 {
 private:
     double r;
-
 public:
     Sphere(double r = 1);
     virtual ~Sphere();
 
     void setValues(double r);
-    double area() const override;
-    double perimeter() const override;
-    double volume() const override;
-    void print(ostream& os) const override;
-    bool operator<(const Sphere& other) const;
-    bool operator>(const Sphere& other) const;
-
-    
+    double area() const;
+    double volume() const;
+    void print() const;
+ 
 };
